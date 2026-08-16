@@ -25,12 +25,12 @@ src/
 
 - Node.js 20 이상
 - npm
-- `http://localhost:8080`에서 실행 중인 [POTATO Backend](https://github.com/POTATO-119/Backend)
+- `http://localhost:8080`에서 실행 중인 [POTATO Backend](https://github.com/POTATO-119/potato-back)
 
 ## 설치 및 실행
 
 ```bash
-git clone https://github.com/POTATO-119/Frontend.git potato-frontend
+git clone https://github.com/POTATO-119/potato-front.git potato-frontend
 cd potato-frontend
 npm install
 cp .env.example .env.local
