@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ── 전체 페이지: 체크 배경 ── */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* ── 스크롤 영역: 좌우 패딩이 체크 테두리 역할 ── */
+.home-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 흰 카드 ── */
+.pixel-card {
+  flex: 1;
+  background: #fff;
+  border: 3px solid #111;
+  /* 픽셀아트 입체감: 오른쪽·아래 두껍게 */
+  box-shadow: 4px 4px 0px #111;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pixel-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 20px 20px;
+  overflow-y: auto;
+}
+
+/* ── 헤더 (카드 안) ── */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 2.5px solid #111;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.home-header__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.home-header__badge {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.home-header__settings {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-header__setting-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* ── 경험치 숫자 ── */
+.pixel-stat {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pixel-stat__current {
+  color: #1a1a1a;
+  font-size: 13px;
+}
+
+.pixel-stat__separator {
+  color: #bbb;
+  margin: 0 2px;
+}
+
+.pixel-stat__max {
+  color: #bbb;
+}
+
+/* ── 프로그레스 바 (둥근 픽셀 하트 스타일) ── */
+.progress-bar-wrap {
+  width: 100%;
+  height: 22px;
+  background-color: #e8e8e8;
+  border: 2.5px solid #333;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0px #333;
+  padding: 2px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3a3a3a 0%, #111 100%);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+/* ── 캐릭터 ── */
+.character-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.character-image {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.character-tagline {
+  font-size: 17px;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: 0.05em;
+  margin-top: 28px;
+}
+
+/* ── 액션 버튼 ── */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.card-action-icon-btn {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #d0d0d0;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.card-action-icon-btn:hover {
+  background: #f5f5f5;
+}
+
+.card-action-main-btn {
+  flex: 1;
+  height: 52px;
+  border: 2px solid #d0d0d0;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 0.03em;
+  transition: background 0.15s;
+}
+
+.card-action-main-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ── 하단 네비게이션 ── */
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-top: 3px solid #111;
+  flex-shrink: 0;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.bottom-nav__item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bottom-nav__icon-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.bottom-nav__indicator {
+  display: none;
+  width: 28px;
+  height: 3px;
+  background: #c0392b;
+  border-radius: 2px;
+}
+
+.bottom-nav__item--active .bottom-nav__indicator {
+  display: block;
+}
